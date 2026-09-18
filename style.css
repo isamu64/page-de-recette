@@ -48,6 +48,19 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--color-background-body);
+}
+
+.card {
+  width: 740px;
+  padding: 25px;
+  border-radius: 1rem;
+  background-color: var(--color-background-card);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 1rem;
 }
 
 .collapse {
