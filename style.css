@@ -50,9 +50,14 @@ html {
   justify-content: center;
 }
 
-/* .nutrition {
+.collapse {
+  border-collapse: collapse;
+}
+
+.table-border {
   border-bottom: 1px solid;
-} */
+  border-color: var(--color-background-body);
+}
 
 .ingredients,
 .instructions {
