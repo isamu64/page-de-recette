@@ -2,6 +2,24 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
+:root {
+  --font-family-h1-h3: "Young serif";
+  --font-family-other: "Outfit";
+
+  --color-background-body: hsl(30, 18%, 87%);
+  --color-background-card: hsl(0, 0%, 100%);
+  --color-title-recipe: hsl(24, 5%, 18%);
+  --color-text-light: hsl(30, 18%, 87%);
+  --color-text-bold: hsl(30, 10%, 34%);
+  --color-title-preparation-time: hsl(332, 51%, 32%);
+  --color-background-preparation-time: hsl(330, 100%, 98%);
+  --color-title-section-value: hsl(14, 45%, 36%);
+
+  --font-weight-title-recipe: 700;
+  --font-weight-title-preparation-time: 400;
+  --font-weight-title-section: 600;
+  --font-weight-text-bold: 400;
+}
 *,
 *::before,
 *::after {
@@ -30,4 +48,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* .nutrition {
+  border-bottom: 1px solid;
+} */
+
+.ingredients,
+.instructions {
+  border-bottom: 1px solid;
 }
