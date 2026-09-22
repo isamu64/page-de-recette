@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
-  --font-family-h1-h2: "Young serif";
+  --font-family-h1-h3: "Young serif";
   --font-family-other: "Outfit";
 
   --color-background-body: hsl(30, 18%, 87%);
@@ -11,13 +11,13 @@
   --color-text-bold: hsl(24, 5%, 18%);
   --color-text-light: hsl(30, 18%, 87%);
   --color-text: hsl(30, 10%, 34%);
-  --color-title-preparation-time: hsl(332, 51%, 32%);
+  --color-title-section-preparation-time: hsl(332, 51%, 32%);
+  --color-title-other-sections: hsl(14, 45%, 36%);
   --color-background-preparation-time: hsl(330, 100%, 98%);
-  --color-title-section-value: hsl(14, 45%, 36%);
 
   --font-weight-title-recipe: 700;
-  --font-weight-title-preparation-time: 400;
-  --font-weight-title-section: 600;
+  --font-weight-h3: 400;
+  --font-weight-title-preparation-time: 600;
   --font-weight-text-bold: 600;
 }
 *,
@@ -60,21 +60,34 @@ html {
   width: 100%;
   border-radius: 1rem;
 }
-h1 {
+h1,
+h3 {
   font-family: var(--font-family-h1-h3);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0 1rem 0;
 }
 
 .card p {
   font-family: var(--font-family-other);
+  margin-bottom: 2rem;
 }
 
 h2 {
   font-family: var(--font-family-other);
-  color: var(--color-title-section-value);
+  color: var(--color-title-section-preparation-time);
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-title-preparation-time);
+  margin-bottom: 1rem;
 }
 
 h3 {
-  font-family: var(--font-family-other);
+  font-size: 2rem;
+  color: var(--color-title-other-sections);
+  font-weight: var(--font-weight-h3);
+  margin: 1rem 0 1rem 0;
 }
 
 .preparation {
@@ -88,6 +101,10 @@ h3 {
   color: var(--color-text);
 }
 
+.preparation li {
+  margin-bottom: 0.5rem;
+}
+
 .first-word {
   font-weight: var(--font-weight-text-bold);
   padding-left: 0.8rem;
@@ -99,13 +116,15 @@ h3 {
 .nutrition {
   font-family: var(--font-family-other);
 }
+
 .collapse {
   border-collapse: collapse;
 }
 
-.table-border {
+.table {
   border-bottom: 1px solid;
   border-color: var(--color-background-body);
+  border-spacing: 5px;
 }
 
 .ingredients,
@@ -117,5 +136,37 @@ h3 {
 .ingredients-list,
 .instructions-list {
   list-style-position: inside;
-  text-align: left;
+}
+
+.card p,
+.preparation-list,
+.ingredients-list,
+.instructions-list,
+.nutrition p,
+.collapse {
+  color: var(--color-text);
+}
+
+.value {
+  color: var(--color-title-other-sections);
+  font-weight: var(--font-weight-text-bold);
+  margin-left: 280px;
+}
+
+.macro {
+  margin-left: 20px;
+}
+
+.ingredients li,
+.instructions li,
+.table td {
+  margin: 1rem 0 1rem 0;
+}
+
+.ingredients-list li:last-child {
+  margin-bottom: 1.5rem;
+}
+
+.instructions-list li:last-child {
+  margin-bottom: 1.5rem;
 }
