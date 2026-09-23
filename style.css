@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
-  --font-family-h1-h3: "Young serif";
-  --font-family-other: "Outfit";
+  --font-family-h1-h2: "Young serif";
+  --font-family-h2-preparation-time: "Outfit";
 
   --color-background-body: hsl(30, 18%, 87%);
   --color-background-card: hsl(0, 0%, 100%);
@@ -61,8 +61,14 @@ html {
   border-radius: 1rem;
 }
 h1,
-h3 {
-  font-family: var(--font-family-h1-h3);
+.ingredients h2,
+.instructions h2,
+.nutrition {
+  font-family: var(--font-family-h1-h2);
+}
+
+.preparation h2 {
+  font-family: var(--font-family-h2-preparation-time);
 }
 
 h1 {
@@ -76,7 +82,7 @@ h1 {
 }
 
 h2 {
-  font-family: var(--font-family-other);
+  font-family: var(--font-family-h2-preparation-time);
   color: var(--color-title-section-preparation-time);
   font-size: 1.3rem;
   font-weight: var(--font-weight-title-preparation-time);
