@@ -4,7 +4,7 @@
 
 :root {
   --font-family-h1-h2: "Young serif";
-  --font-family-h2-preparation-time: "Outfit";
+  --font-family-h2-preparation-time-text: "Outfit";
 
   --color-background-body: hsl(30, 18%, 87%);
   --color-background-card: hsl(0, 0%, 100%);
@@ -12,13 +12,14 @@
   --color-text-light: hsl(30, 18%, 87%);
   --color-text: hsl(30, 10%, 34%);
   --color-title-section-preparation-time: hsl(332, 51%, 32%);
-  --color-title-other-sections: hsl(14, 45%, 36%);
+  --color-title-h2-td: hsl(14, 45%, 36%);
   --color-background-preparation-time: hsl(330, 100%, 98%);
 
   --font-weight-title-recipe: 700;
-  --font-weight-h3: 400;
+  --font-weight-h2: 400;
+  --font-weight-text: 400;
   --font-weight-title-preparation-time: 600;
-  --font-weight-text-bold: 600;
+  --font-weight-first-word-values: 600;
 }
 *,
 *::before,
@@ -33,6 +34,10 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: var(--font-family-h2-preparation-time-text);
 }
 
 html {
@@ -50,7 +55,7 @@ html {
 }
 
 .card {
-  width: 740px;
+  max-width: 740px;
   padding: 25px;
   border-radius: 1rem;
   background-color: var(--color-background-card);
@@ -60,15 +65,12 @@ html {
   width: 100%;
   border-radius: 1rem;
 }
+
 h1,
 .ingredients h2,
 .instructions h2,
-.nutrition {
+.nutrition h2 {
   font-family: var(--font-family-h1-h2);
-}
-
-.preparation h2 {
-  font-family: var(--font-family-h2-preparation-time);
 }
 
 h1 {
@@ -77,22 +79,22 @@ h1 {
 }
 
 .card p {
-  font-family: var(--font-family-other);
   margin-bottom: 2rem;
 }
 
-h2 {
-  font-family: var(--font-family-h2-preparation-time);
+.preparation h2 {
   color: var(--color-title-section-preparation-time);
   font-size: 1.3rem;
   font-weight: var(--font-weight-title-preparation-time);
   margin-bottom: 1rem;
 }
 
-h3 {
+.ingredients h2,
+.instructions h2,
+.nutrition h2 {
   font-size: 2rem;
-  color: var(--color-title-other-sections);
-  font-weight: var(--font-weight-h3);
+  color: var(--color-title-h2-td);
+  font-weight: var(--font-weight-h2);
   margin: 1rem 0 1rem 0;
 }
 
@@ -102,35 +104,23 @@ h3 {
   padding: 1.5rem;
 }
 
-.preparation-list {
-  font-family: var(--font-family-other);
-  color: var(--color-text);
-}
-
 .preparation li {
   margin-bottom: 0.5rem;
 }
 
-.first-word {
-  font-weight: var(--font-weight-text-bold);
-  padding-left: 0.8rem;
-  color: var(--color-text-bold);
+.preparation li:last-child {
+  margin-bottom: 0;
 }
 
-.ingredients-list,
-.instructions-list,
-.nutrition {
-  font-family: var(--font-family-other);
+.first-word {
+  font-weight: var(--font-weight-first-word-values);
+  margin-left: 0.8rem;
+  color: var(--color-text);
 }
 
 .collapse {
   border-collapse: collapse;
-}
-
-.table {
-  border-bottom: 1px solid;
-  border-color: var(--color-background-body);
-  border-spacing: 5px;
+  text-align: left;
 }
 
 .ingredients,
@@ -138,41 +128,42 @@ h3 {
   border-bottom: 1px solid;
 }
 
-.preparation-list,
-.ingredients-list,
-.instructions-list {
+.preparation li,
+.ingredients li,
+.instructions li {
   list-style-position: inside;
 }
 
 .card p,
-.preparation-list,
-.ingredients-list,
-.instructions-list,
+.preparation,
+.ingredients,
+.instructions,
 .nutrition p,
-.collapse {
+th {
   color: var(--color-text);
 }
 
-.value {
-  color: var(--color-title-other-sections);
-  font-weight: var(--font-weight-text-bold);
-  margin-left: 280px;
-}
-
-.macro {
-  margin-left: 20px;
-}
-
 .ingredients li,
-.instructions li,
-.table td {
+.instructions li {
   margin: 1rem 0 1rem 0;
 }
 
-.ingredients-list li:last-child {
-  margin-bottom: 1.5rem;
+tr {
+  border-bottom: 1px solid;
+  border-color: var(--color-background-body);
+}
+th {
+  font-weight: var(--font-weight-text);
 }
 
-.instructions-list li:last-child {
-  margin-bottom: 1.5rem;
+td {
+  font-weight: var(--font-weight-first-word-values);
+  color: var(--color-title-h2-td);
+}
+
+@media (max-width: 375px) {
+  .card img {
+    width: calc(100% + 50px);
+    margin-left: -25px;
+  }
 }
