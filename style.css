@@ -121,6 +121,7 @@ h1 {
 .collapse {
   border-collapse: collapse;
   text-align: left;
+  width: 100%;
 }
 
 .ingredients,
@@ -152,13 +153,37 @@ tr {
   border-bottom: 1px solid;
   border-color: var(--color-background-body);
 }
+
+tr:last-child {
+  border-bottom: 0;
+}
+
 th {
   font-weight: var(--font-weight-text);
+  position: relative;
+  left: 35px;
 }
 
 td {
   font-weight: var(--font-weight-first-word-values);
   color: var(--color-title-h2-td);
+  position: relative;
+  left: -20px;
+}
+
+th,
+td {
+  padding-bottom: 1rem;
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+  padding-bottom: 0;
+}
+
+tbody tr:nth-child(n + 2) th,
+tbody tr:nth-child(n + 2) td {
+  padding-top: 1rem;
 }
 
 @media (max-width: 375px) {
