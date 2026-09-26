@@ -104,10 +104,6 @@ h1 {
   padding: 1.5rem;
 }
 
-.preparation li {
-  margin-bottom: 0.5rem;
-}
-
 .preparation li:last-child {
   margin-bottom: 0;
 }
@@ -126,6 +122,20 @@ h1 {
 .ingredients,
 .instructions {
   border-bottom: 1px solid;
+}
+
+.preparation li {
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.ingredients li {
+  padding-left: 0.5rem;
+}
+
+.ingredients span,
+.preparation span {
+  padding-left: 1rem;
 }
 
 .preparation li,
