@@ -114,7 +114,6 @@ h1 {
 
 .first-word {
   font-weight: var(--font-weight-first-word-values);
-  margin-left: 0.8rem;
   color: var(--color-text);
 }
 
@@ -133,6 +132,18 @@ h1 {
 .ingredients li,
 .instructions li {
   list-style-position: inside;
+}
+.instructions ol {
+  list-style: none;
+  counter-reset: instructions;
+}
+
+.instructions li {
+  counter-increment: instructions;
+}
+
+.instructions li::before {
+  content: counter(instructions) ".";
 }
 
 .card p,
