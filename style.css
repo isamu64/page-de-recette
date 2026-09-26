@@ -55,7 +55,7 @@ html {
 }
 
 .card {
-  max-width: 740px;
+  max-width: 46.25rem;
   padding: 25px;
   border-radius: 1rem;
   background-color: var(--color-background-card);
@@ -124,25 +124,41 @@ h1 {
   border-bottom: 1px solid;
 }
 
-.preparation li {
+.preparation ul {
+  list-style: none;
+}
+
+.preparation li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
   padding-left: 0.5rem;
+}
+.preparation li {
+  position: relative;
+  padding-left: 1.5rem;
   padding-bottom: 1rem;
+}
+.ingredients ul {
+  list-style: none;
 }
 
 .ingredients li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.ingredients li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
   padding-left: 0.5rem;
 }
 
-.ingredients span,
-.preparation span {
-  padding-left: 1rem;
-}
-
-.preparation li,
-.ingredients li,
 .instructions li {
   list-style-position: inside;
 }
+
 .instructions ol {
   list-style: none;
   counter-reset: instructions;
@@ -211,11 +227,14 @@ tbody tr:nth-child(n + 2) td {
   padding-top: 1rem;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 23.4375rem) {
   .card img {
     width: calc(100% + 50px);
     margin-left: -25px;
     border-radius: 0;
     margin-top: -25px;
+  }
+  .preparation li {
+    width: 95%;
   }
 }
